@@ -1,9 +1,18 @@
 <?php
 
+/*
+ * This file is part of Affili.net PHP SDK.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Affilinet\Services;
 
-use BrianFaust\Affilinet\Response;
 use BrianFaust\Affilinet\Auth;
+use BrianFaust\Affilinet\Response;
 
 /**
  * Class AbstractService.
