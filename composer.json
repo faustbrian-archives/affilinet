@@ -1,0 +1,46 @@
+{
+    "name": "faustbrian/affilinet-php-sdk",
+    "description": "PHP SDK for the Affili.net API",
+    "keywords": ["affilinet", "sdk", "php", "Affilinet-PHP-SDK", "Affilinet PHP SDK", "Brian Faust", "faustbrian"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Brian Faust",
+        "email": "hello@brianfaust.de",
+        "homepage": "https://brianfaust.de"
+    }],
+    "require": {
+        "php": "^7.0",
+        "nesbot/carbon": "^1.21",
+        "illuminate/cache": "5.3.*",
+        "illuminate/container": "5.3.*",
+        "illuminate/filesystem": "5.3.*"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.2",
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrianFaust\\Affilinet\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianFaust\\Tests\\Affilinet\\": "tests"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
