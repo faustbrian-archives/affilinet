@@ -91,12 +91,8 @@ class Auth
      *
      * @return mixed
      */
-    private function getTokenExpirationDate($token = null)
+    private function getTokenExpirationDate($token)
     {
-        if (!$token) {
-            $token = $this->cache->get($this->getCacheKey());
-        }
-
         return $this->service->GetIdentifierExpiration($token);
     }
 
