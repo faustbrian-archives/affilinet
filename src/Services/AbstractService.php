@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Affilinet\Services;
 
 use BrianFaust\Affilinet\Auth;
@@ -27,7 +29,7 @@ abstract class AbstractService
      *
      * @param Auth $auth
      */
-    public function __construct(Auth $auth)
+    public function __construct(Auth $auth): void
     {
         $this->auth = $auth;
         $this->client = \BrianFaust\Affilinet\default_soap_client(static::WSDL);
@@ -39,7 +41,7 @@ abstract class AbstractService
      *
      * @return \BrianFaust\Affilinet\Response
      */
-    public function __call(string $method, array $params) : Response
+    public function __call(string $method, array $params): Response
     {
         $params = array_merge([
             'CredentialToken' => $this->auth->getToken(),

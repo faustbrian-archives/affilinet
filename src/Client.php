@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Affilinet;
 
 /**
@@ -28,7 +30,7 @@ class Client
      * @param string $username
      * @param string $password
      */
-    public function __construct(string $username, string $password)
+    public function __construct(string $username, string $password): void
     {
         $this->username = $username;
         $this->password = $password;
@@ -39,7 +41,7 @@ class Client
      *
      * @return \BrianFaust\Affilinet\Services\AbstractService
      */
-    public function service(string $name) : Services\AbstractService
+    public function service(string $name): Services\AbstractService
     {
         $serviceClass = sprintf('BrianFaust\\Affilinet\\Services\\%sService', ucfirst($name));
 

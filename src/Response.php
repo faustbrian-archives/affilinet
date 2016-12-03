@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Affilinet;
 
 /**
@@ -21,7 +23,7 @@ class Response
      *
      * @param $soapResponse
      */
-    public function __construct($soapResponse)
+    public function __construct($soapResponse): void
     {
         $this->soapResponse = $soapResponse;
     }
@@ -29,7 +31,7 @@ class Response
     /**
      * @return mixed
      */
-    public function body()
+    public function body(): string
     {
         return json_decode(json_encode($this->soapResponse), true);
     }
@@ -37,18 +39,18 @@ class Response
     /**
      * @return array|bool
      */
-    public function errors()
+    public function errors(): array
     {
-        return (!$this->hasErrors()) ? false : [
+        return $this->hasErrors() ? [
             'message' => $this->soapResponse->getMessage(),
             'code'    => $this->soapResponse->getCode(),
-        ];
+        ] : [];
     }
 
     /**
      * @return bool
      */
-    public function hasErrors()
+    public function hasErrors(): bool
     {
         return $this->soapResponse instanceof \SoapFault;
     }

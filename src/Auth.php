@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Affilinet;
 
 use Carbon\Carbon;
@@ -23,8 +25,6 @@ class Auth
 
     /** @var string */
     const WSDL_PRODUCT = 'http://product-api.affili.net/Authentication/Logon.svc?wsdl';
-
-    const WSDL = 'https://api.affili.net/V2.0/Logon.svc?wsdl';
 
     /** @var string */
     private $username;
@@ -45,7 +45,7 @@ class Auth
      * @param string $password
      * @param string $webServiceType
      */
-    public function __construct(string $username, string $password, string $webServiceType)
+    public function __construct(string $username, string $password, string $webServiceType): void
     {
         $this->username = $username;
         $this->password = $password;
@@ -61,7 +61,7 @@ class Auth
     /**
      * @return mixed
      */
-    public function getToken()
+    public function getToken(): string
     {
         if ($this->tokenHasExpired()) {
             $token = $this->createToken();
@@ -78,7 +78,7 @@ class Auth
     /**
      * @return bool
      */
-    private function tokenHasExpired()
+    private function tokenHasExpired(): bool
     {
         return !$this->cache->has($this->getCacheKey());
     }
@@ -86,7 +86,7 @@ class Auth
     /**
      * @return mixed
      */
-    private function createToken()
+    private function createToken(): string
     {
         return $this->service->Logon([
             'Username'       => $this->username,
@@ -100,7 +100,7 @@ class Auth
      *
      * @return mixed
      */
-    private function getTokenExpirationDate($token)
+    private function getTokenExpirationDate($token): string
     {
         return $this->service->GetIdentifierExpiration($token);
     }
@@ -108,7 +108,7 @@ class Auth
     /**
      * @return string
      */
-    private function getCacheKey() : string
+    private function getCacheKey(): string
     {
         return 'affilinet_'.$this->webServiceType.'_token';
     }

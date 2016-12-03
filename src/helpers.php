@@ -9,7 +9,11 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Affilinet;
+
+use SoapClient;
 
 /**
  * Creates a pre-configured Soap client with the default settings.
@@ -17,11 +21,11 @@ namespace BrianFaust\Affilinet;
  * @param string $wsdl   WSDL of the service
  * @param array  $config Soap client configuration
  *
- * @return \SoapClient
+ * @return SoapClient
  */
-function default_soap_client($wsdl, array $config = [])
+function default_soap_client($wsdl, array $config = []): SoapClient
 {
-    return new \SoapClient($wsdl, array_merge([
+    return new SoapClient($wsdl, array_merge([
         'trace'        => 1,
         'exceptions'   => 0,
         'soap_version' => SOAP_1_1,

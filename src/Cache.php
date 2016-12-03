@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Affilinet;
 
 use Illuminate\Cache\CacheManager;
@@ -26,7 +28,7 @@ class Cache
     /**
      * Cache constructor.
      */
-    public function __construct()
+    public function __construct(): void
     {
         $container = new Container();
 
