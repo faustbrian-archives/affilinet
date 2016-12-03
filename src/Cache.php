@@ -37,7 +37,7 @@ class Cache
     /**
      * Cache constructor.
      */
-    public function __construct(): void
+    public function __construct()
     {
         $container = new Container();
 
