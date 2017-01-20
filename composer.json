@@ -11,9 +11,9 @@
     "require": {
         "php": "^7.1",
         "nesbot/carbon": "^1.21",
-        "illuminate/cache": "5.3.*",
-        "illuminate/container": "5.3.*",
-        "illuminate/filesystem": "5.3.*"
+        "illuminate/cache": "5.3.* || 5.4.*",
+        "illuminate/container": "5.3.* || 5.4.*",
+        "illuminate/filesystem": "5.3.* || 5.4.*"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
