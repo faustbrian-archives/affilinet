@@ -23,15 +23,15 @@
     "autoload": {
         "psr-4": {
             "BrianFaust\\Affilinet\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "BrianFaust\\Tests\\Affilinet\\": "tests"
         },
         "files": [
             "src/helpers.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianFaust\\Tests\\Affilinet\\": "tests"
+        }
     },
     "config": {
         "preferred-install": "dist"
