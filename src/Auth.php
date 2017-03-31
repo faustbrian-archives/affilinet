@@ -11,15 +11,6 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Affili.net PHP SDK.
- *
- * (c) Brian Faust <hello@brianfaust.de>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace BrianFaust\Affilinet;
 
 use Carbon\Carbon;
@@ -54,7 +45,7 @@ class Auth
      * @param string $password
      * @param string $webServiceType
      */
-    public function __construct(string $username, string $password, string $webServiceType): void
+    public function __construct(string $username, string $password, string $webServiceType)
     {
         $this->username = $username;
         $this->password = $password;
