@@ -41,7 +41,7 @@ class Response
     {
         return $this->hasErrors() ? [
             'message' => $this->soapResponse->getMessage(),
-            'code' => $this->soapResponse->getCode(),
+            'code'    => $this->soapResponse->getCode(),
         ] : [];
     }
 
