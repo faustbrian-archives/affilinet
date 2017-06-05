@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Affili.net PHP SDK.
  *
@@ -30,7 +27,7 @@ abstract class AbstractService
      *
      * @param Auth $auth
      */
-    public function __construct(Auth $auth): void
+    public function __construct(Auth $auth)
     {
         $this->auth = $auth;
         $this->client = \BrianFaust\Affilinet\default_soap_client(static::WSDL);

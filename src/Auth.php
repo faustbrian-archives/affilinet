@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Affili.net PHP SDK.
  *
@@ -90,8 +87,8 @@ class Auth
     private function createToken(): string
     {
         return $this->service->Logon([
-            'Username'       => $this->username,
-            'Password'       => $this->password,
+            'Username' => $this->username,
+            'Password' => $this->password,
             'WebServiceType' => $this->webServiceType,
         ]);
     }

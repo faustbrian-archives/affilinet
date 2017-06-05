@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Affili.net PHP SDK.
  *
@@ -27,8 +24,8 @@ use SoapClient;
 function default_soap_client($wsdl, array $config = []): SoapClient
 {
     return new SoapClient($wsdl, array_merge([
-        'trace'        => 1,
-        'exceptions'   => 0,
+        'trace' => 1,
+        'exceptions' => 0,
         'soap_version' => SOAP_1_1,
     ], $config));
 }

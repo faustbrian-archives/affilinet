@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Affili.net PHP SDK.
  *
@@ -17,7 +14,7 @@ namespace BrianFaust\Affilinet\Services;
 /**
  * Account Web service.
  *
- * @link http://publisher.affili.net/Solutions/Webservices_Webservices.aspx?nr=1&pnp=57#Account
+ * @see http://publisher.affili.net/Solutions/Webservices_Webservices.aspx?nr=1&pnp=57#Account
  */
 class AccountService extends AbstractService
 {
