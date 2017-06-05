@@ -31,10 +31,10 @@ class Cache
         $container = new Container();
 
         $container['config'] = [
-            'cache.default' => 'file',
+            'cache.default'     => 'file',
             'cache.stores.file' => [
                 'driver' => 'file',
-                'path' => __DIR__.'/../cache',
+                'path'   => __DIR__.'/../cache',
             ],
         ];
 
