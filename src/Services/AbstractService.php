@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of Affili.net PHP SDK.
+ * This file is part of Affilinet PHP Client.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,10 +11,10 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Affilinet\Services;
+namespace BrianFaust\AffilinetSdk\Services;
 
-use BrianFaust\Affilinet\Auth;
-use BrianFaust\Affilinet\Response;
+use BrianFaust\AffilinetSdk\Auth;
+use BrianFaust\AffilinetSdk\Response;
 
 /**
  * Class AbstractService.
@@ -29,8 +31,8 @@ abstract class AbstractService
      */
     public function __construct(Auth $auth)
     {
-        $this->auth = $auth;
-        $this->client = \BrianFaust\Affilinet\default_soap_client(static::WSDL);
+        $this->auth   = $auth;
+        $this->client = \BrianFaust\AffilinetSdk\default_soap_client(static::WSDL);
     }
 
     /**
@@ -46,7 +48,7 @@ abstract class AbstractService
         ], array_get($params, '0', []));
 
         $response = $this->client->$method($params);
-
+dd($response);
         return new Response($response);
     }
 }

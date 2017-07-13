@@ -1,7 +1,7 @@
 {
     "name": "faustbrian/affilinet-php-sdk",
-    "description": "PHP SDK for the Affili.net API",
-    "keywords": ["affilinet", "sdk", "php", "Affilinet-PHP-SDK", "Affilinet PHP SDK", "Brian Faust", "faustbrian"],
+    "description": "PHP Client for the Affili.net API",
+    "keywords": ["affilinet", "sdk", "php", "Affilinet-PHP-Client", "Affilinet PHP Client", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Affilinet\\": "src/"
+            "BrianFaust\\AffilinetSdk\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -30,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Affilinet\\": "tests"
+            "BrianFaust\\Tests\\AffilinetSdk\\": "tests"
         }
     },
     "config": {

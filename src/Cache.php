@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of Affili.net PHP SDK.
+ * This file is part of Affilinet PHP Client.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Affilinet;
+namespace BrianFaust\AffilinetSdk;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Container\Container;

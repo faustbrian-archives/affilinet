@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Affili.net PHP SDK.
+ * This file is part of Affilinet PHP Client.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *

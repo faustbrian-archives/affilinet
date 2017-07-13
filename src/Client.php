@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of Affili.net PHP SDK.
+ * This file is part of Affilinet PHP Client.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Affilinet;
+namespace BrianFaust\AffilinetSdk;
 
 /**
  * Class Client.
@@ -41,7 +43,7 @@ class Client
      */
     public function service(string $name): Services\AbstractService
     {
-        $serviceClass = sprintf('BrianFaust\\Affilinet\\Services\\%sService', ucfirst($name));
+        $serviceClass = sprintf('BrianFaust\\AffilinetSdk\\Services\\%sService', ucfirst($name));
 
         $auth = new Auth($this->username, $this->password, $serviceClass::TYPE);
 

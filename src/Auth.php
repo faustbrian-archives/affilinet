@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of Affili.net PHP SDK.
+ * This file is part of Affilinet PHP Client.
  *
  * (c) Brian Faust <hello@brianfaust.de>
  *
@@ -9,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Affilinet;
+namespace BrianFaust\AffilinetSdk;
 
 use Carbon\Carbon;
 
@@ -45,11 +47,11 @@ class Auth
      */
     public function __construct(string $username, string $password, string $webServiceType)
     {
-        $this->username = $username;
-        $this->password = $password;
+        $this->username       = $username;
+        $this->password       = $password;
         $this->webServiceType = $webServiceType;
 
-        $this->service = default_soap_client(
+        $this->service = \BrianFaust\AffilinetSdk\default_soap_client(
             $webServiceType === 'Publisher' ? static::WSDL_PUBLISHER : static::WSDL_PRODUCT
         );
 
@@ -84,7 +86,7 @@ class Auth
     /**
      * @return mixed
      */
-    private function createToken(): string
+    private function createToken()
     {
         return $this->service->Logon([
             'Username'       => $this->username,
