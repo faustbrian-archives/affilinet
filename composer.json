@@ -1,5 +1,5 @@
 {
-    "name": "faustbrian/affilinet-php-sdk",
+    "name": "faustbrian/affilinet-php-client",
     "description": "A developer-experience focused Affilinet API client.",
     "keywords": ["affilinet", "sdk", "php", "Affilinet-PHP-Client", "Affilinet PHP Client", "Brian Faust", "faustbrian"],
     "license": "MIT",
