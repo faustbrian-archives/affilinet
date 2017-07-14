@@ -66,8 +66,9 @@ class Auth
         if ($this->tokenHasExpired()) {
             $token = $this->createToken();
 
-            $expiresAt = $this->getTokenExpirationDate($token);
-            $expiresAt = (new Carbon($expiresAt))->addMinutes(20);
+            // $expiresAt = $this->getTokenExpirationDate($token);
+            // $expiresAt = (new Carbon($expiresAt))->addMinutes(20);
+            $expiresAt = 20;
 
             $this->cache->put($this->getCacheKey(), $token, $expiresAt);
         }
