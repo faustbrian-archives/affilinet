@@ -31,7 +31,7 @@ abstract class AbstractService
      */
     public function __construct(Auth $auth)
     {
-        $this->auth   = $auth;
+        $this->auth = $auth;
         $this->client = \BrianFaust\AffilinetSdk\default_soap_client(static::WSDL);
     }
 

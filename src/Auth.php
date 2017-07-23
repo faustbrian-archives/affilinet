@@ -47,8 +47,8 @@ class Auth
      */
     public function __construct(string $username, string $password, string $webServiceType)
     {
-        $this->username       = $username;
-        $this->password       = $password;
+        $this->username = $username;
+        $this->password = $password;
         $this->webServiceType = $webServiceType;
 
         $this->service = \BrianFaust\AffilinetSdk\default_soap_client(
@@ -81,7 +81,7 @@ class Auth
      */
     private function tokenHasExpired(): bool
     {
-        return !$this->cache->has($this->getCacheKey());
+        return ! $this->cache->has($this->getCacheKey());
     }
 
     /**
