@@ -48,7 +48,7 @@ abstract class AbstractService
         ], array_get($params, '0', []));
 
         $response = $this->client->$method($params);
-dd($response);
+
         return new Response($response);
     }
 }
