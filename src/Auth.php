@@ -81,7 +81,7 @@ class Auth
      */
     private function tokenHasExpired(): bool
     {
-        return ! $this->cache->has($this->getCacheKey());
+        return !$this->cache->has($this->getCacheKey());
     }
 
     /**
