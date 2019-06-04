@@ -5,16 +5,16 @@ declare(strict_types=1);
 /*
  * This file is part of Affilinet PHP.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\AffilinetSdk\Services;
+namespace Plients\AffilinetSdk\Services;
 
-use BrianFaust\AffilinetSdk\Auth;
-use BrianFaust\AffilinetSdk\Response;
+use Plients\AffilinetSdk\Auth;
+use Plients\AffilinetSdk\Response;
 
 /**
  * Class AbstractService.
@@ -32,14 +32,14 @@ abstract class AbstractService
     public function __construct(Auth $auth)
     {
         $this->auth = $auth;
-        $this->client = \BrianFaust\AffilinetSdk\default_soap_client(static::WSDL);
+        $this->client = \Plients\AffilinetSdk\default_soap_client(static::WSDL);
     }
 
     /**
      * @param string $method
      * @param array  $params
      *
-     * @return \BrianFaust\Affilinet\Response
+     * @return \Plients\Affilinet\Response
      */
     public function __call(string $method, array $params): Response
     {

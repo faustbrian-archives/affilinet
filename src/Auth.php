@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Affilinet PHP.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\AffilinetSdk;
+namespace Plients\AffilinetSdk;
 
 use Carbon\Carbon;
 
@@ -51,7 +51,7 @@ class Auth
         $this->password = $password;
         $this->webServiceType = $webServiceType;
 
-        $this->service = \BrianFaust\AffilinetSdk\default_soap_client(
+        $this->service = \Plients\AffilinetSdk\default_soap_client(
             $webServiceType === 'Publisher' ? static::WSDL_PUBLISHER : static::WSDL_PRODUCT
         );
 

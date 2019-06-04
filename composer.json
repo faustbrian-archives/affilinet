@@ -1,13 +1,23 @@
 {
-    "name": "faustbrian/affilinet-php",
+    "name": "plients/affilinet-php",
     "description": "A developer-experience focused Affilinet API client.",
-    "keywords": ["affilinet", "sdk", "php", "Affilinet-PHP-Client", "Affilinet PHP", "Brian Faust", "faustbrian"],
+    "keywords": [
+        "affilinet",
+        "sdk",
+        "php",
+        "Affilinet-PHP-Client",
+        "Affilinet PHP",
+        "Brian Faust",
+        "faustbrian"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
         "php": "^7.1",
         "nesbot/carbon": "^1.21",
@@ -22,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\AffilinetSdk\\": "src/"
+            "Plients\\AffilinetSdk\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -30,7 +40,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\AffilinetSdk\\": "tests"
+            "Plients\\Tests\\AffilinetSdk\\": "tests"
         }
     },
     "config": {

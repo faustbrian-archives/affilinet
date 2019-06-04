@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Affilinet PHP.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\AffilinetSdk;
+namespace Plients\AffilinetSdk;
 
 /**
  * Class Client.
@@ -39,11 +39,11 @@ class Client
     /**
      * @param string $name
      *
-     * @return \BrianFaust\Affilinet\Services\AbstractService
+     * @return \Plients\Affilinet\Services\AbstractService
      */
     public function service(string $name): Services\AbstractService
     {
-        $serviceClass = sprintf('BrianFaust\\AffilinetSdk\\Services\\%sService', ucfirst($name));
+        $serviceClass = sprintf('Plients\\AffilinetSdk\\Services\\%sService', ucfirst($name));
 
         $auth = new Auth($this->username, $this->password, $serviceClass::TYPE);
 
