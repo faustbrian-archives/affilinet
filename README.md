@@ -1,16 +1,16 @@
 # Affilinet PHP
 
-[![Build Status](https://img.shields.io/travis/plients/Affilinet-PHP-Client/master.svg?style=flat-square)](https://travis-ci.org/plients/Affilinet-PHP-Client)
+[![Build Status](https://img.shields.io/travis/plients/affilinet/master.svg?style=flat-square)](https://travis-ci.org/plients/affilinet)
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/plients/affilinet.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/plients/Affilinet-PHP-Client.svg?style=flat-square)](https://github.com/plients/Affilinet-PHP-Client/releases)
-[![License](https://img.shields.io/packagist/l/plients/Affilinet-PHP-Client.svg?style=flat-square)](https://packagist.org/packages/plients/Affilinet-PHP-Client)
+[![Latest Version](https://img.shields.io/github/release/plients/affilinet.svg?style=flat-square)](https://github.com/plients/affilinet/releases)
+[![License](https://img.shields.io/packagist/l/plients/affilinet.svg?style=flat-square)](https://packagist.org/packages/plients/affilinet)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require plients/affilinet-php
+$ composer require plients/affilinet
 ```
 
 ## Usage
